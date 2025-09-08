@@ -1,0 +1,19 @@
+// FontAwesome
+$fa-font-path: "../fonts/webfonts" !default;
+
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+    font-family: "museo_sans_rounded1000";
+    src:
+        url("../fonts/museosansrounded1000-webfont.woff2") format("woff2"),
+        url("../fonts/museosansrounded1000-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}

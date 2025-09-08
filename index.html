@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="es-MX" id="html-root" data-bs-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Carnemart - Catálogo navideño</title>
+
+        <link
+            rel="icon"
+            type="image/png"
+            href="./favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+        <link rel="shortcut icon" href="./favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./apple-touch-icon.png"
+        />
+        <meta name="apple-mobile-web-app-title" content="Carnemart" />
+        <link rel="manifest" href="./site.webmanifest" />
+
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+    </head>
+    <body>
+        <div id="backdrop"></div>
+        <div class="menu">
+            <a id="cerrar-menu" href="javascript:void(0)">
+                <i class="fas fa-times"></i>
+            </a>
+            <div class="menu-contenido">
+                <a class="anchor" id="btn-logo" href="#">
+                    <img
+                        class="logo img-fluid"
+                        alt=""
+                        src="./assets/images/logo-light@2x.png"
+                        data-theme-light="./assets/images/logo-light@2x.png"
+                        data-theme-dark="./assets/images/logo-dark@2x.png"
+                    />
+                </a>
+                <nav>
+                    <ul id="navmenu" class="list-unstyled mb-0">
+                        <li>
+                            <a class="anchor" id="btn-nav-1" href="#jumbotron"
+                                >Inicio</a
+                            >
+                        </li>
+                        <li>
+                            <a class="anchor" id="btn-nav-2" href="#catalogo"
+                                >Catálogo</a
+                            >
+                        </li>
+                        <li>
+                            <a class="anchor" id="btn-nav-3" href="#blog"
+                                >Blog</a
+                            >
+                        </li>
+                        <li>
+                            <a class="anchor" id="btn-nav-4" href="#beneficios"
+                                >Beneficios</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <a
+                    href="#contacto"
+                    class="anchor btn btn-success rounded-pill"
+                    id="btn-contacto"
+                    >Contáctanos</a
+                >
+            </div>
+        </div>
+
+        <header id="navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-2 my-auto">
+                        <a id="logo-navbar-link" href="#jumbotron">
+                            <img
+                                id="logo-navbar"
+                                class="logo img-fluid"
+                                alt=""
+                                src="./assets/images/logo-light@2x.png"
+                                data-theme-light="./assets/images/logo-light@2x.png"
+                                data-theme-dark="./assets/images/logo-dark@2x.png"
+                            />
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-8 col-lg-10 my-auto text-end">
+                        <nav class="d-none d-lg-block">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item">
+                                    <a class="active" href="#jumbotron">
+                                        Inicio
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#catalogo"> Catálogo </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#blog"> Blog </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#beneficios"> Beneficios </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a
+                                        class="btn btn-success rounded-pill"
+                                        href="#contacto"
+                                    >
+                                        Contáctanos
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a
+                            id="mburger"
+                            class="d-lg-none"
+                            href="javascript:void(0)"
+                        >
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="jumbotron" class="py-60">
+            <div class="container">
+                <div class="row">
+                    <div
+                        class="col-12 col-lg-6 offset-lg-3 my-auto text-center"
+                    >
+                        <div id="contenedor-info" class="position-relative">
+                            <h1
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="0"
+                            >
+                                Consiente a tus colaboradores
+                            </h1>
+                            <p
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="100"
+                            >
+                                La <strong>solución ideal</strong> para cenas,
+                                posadas y celebraciones de tu equipo de trabajo.
+                            </p>
+                            <a
+                                href="#contacto"
+                                class="btn btn-secondary btn-lg rounded-pill"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="200"
+                                >Contáctanos ahora</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img
+                src="./assets/images/thumb-jumbotron.png"
+                alt=""
+                class="thumb-jumbotron img-fluid d-none d-lg-block"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+            />
+        </section>
+
+        <section id="acerca-de" class="py-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-2">
+                        <img
+                            class="img-fluid mb-4 mb-lg-0"
+                            alt="Pierna de cerdo ahumada"
+                            src="./assets/images/thumb-acerca-de.png"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="0"
+                        />
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <p
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="0"
+                        >
+                            Ofrecemos
+                            <strong>soluciones prácticas y de calidad</strong>
+                            para que tus colaboradores disfruten de la mejor
+                            experiencia gastronómica en esta temporada navideña.
+                        </p>
+
+                        <p
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="100"
+                        >
+                            <strong
+                                >Productos 100% carne, listos para calentar y
+                                servir.</strong
+                            >
+                        </p>
+                    </div>
+                </div>
+                <div
+                    id="caracteristicas-1"
+                    class="row"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                >
+                    <div class="col-9">
+                        <ul class="list-inline mb-0 mb-lg-3">
+                            <li class="list-inline-item mb-3 mb-lg-0">
+                                <div class="row">
+                                    <div class="col-3 my-auto">
+                                        <img
+                                            class="img-fluid"
+                                            alt="100% Carne Seleccionada"
+                                            src="./assets/images/ico-acerca-de-1.png"
+                                        />
+                                    </div>
+                                    <div class="col-9 my-auto">
+                                        <p>100% Carne Seleccionada</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item mb-3 mb-lg-0">
+                                <div class="row">
+                                    <div class="col-3 my-auto">
+                                        <img
+                                            class="img-fluid"
+                                            alt="100% Carne Seleccionada"
+                                            src="./assets/images/ico-acerca-de-2.png"
+                                        />
+                                    </div>
+                                    <div class="col-9 my-auto">
+                                        <p>Sabor tradicional</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    id="caracteristicas-2"
+                    class="row"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                >
+                    <div class="col-9 col-lg-12">
+                        <ul class="list-inline">
+                            <li class="list-inline-item mb-3 mb-lg-0">
+                                <div class="row">
+                                    <div class="col-3 my-auto">
+                                        <img
+                                            class="img-fluid"
+                                            alt="100% Carne Seleccionada"
+                                            src="./assets/images/ico-acerca-de-3.png"
+                                        />
+                                    </div>
+                                    <div class="col-9 my-auto">
+                                        <p>
+                                            Presentaciones por pieza o por kilo
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item mb-3 mb-lg-0">
+                                <div class="row">
+                                    <div class="col-3 my-auto">
+                                        <img
+                                            class="img-fluid"
+                                            alt="100% Carne Seleccionada"
+                                            src="./assets/images/ico-acerca-de-4.png"
+                                        />
+                                    </div>
+                                    <div class="col-9 my-auto">
+                                        <p>Listos para servir</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item mb-3 mb-lg-0">
+                                <div class="row">
+                                    <div class="col-3 my-auto">
+                                        <img
+                                            class="img-fluid"
+                                            alt="100% Carne Seleccionada"
+                                            src="./assets/images/ico-acerca-de-5.png"
+                                        />
+                                    </div>
+                                    <div class="col-9 my-auto">
+                                        <p>
+                                            Ideales para cenas y eventos
+                                            corporativos
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-inline"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-12 text-center">
+                        <h1
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="0"
+                        >
+                            Conoce nuestro catálogo
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-2 text-center">
+                        <div class="row">
+                            <div
+                                class="col-lg-3"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="100"
+                            >
+                                <div class="card mb-4">
+                                    <img
+                                        src="./assets/images/p-1@2x.png"
+                                        class="card-img-top"
+                                        alt="Res para tu menú navideño"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Res para tu menú navideño
+                                        </h5>
+                                        <a
+                                            href="#"
+                                            class="btn btn-danger rounded-pill"
+                                            >Conoce más</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-lg-3"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="200"
+                            >
+                                <div class="card mb-4">
+                                    <img
+                                        src="./assets/images/p-1@2x.png"
+                                        class="card-img-top"
+                                        alt="Res para tu menú navideño"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Res para tu menú navideño
+                                        </h5>
+                                        <a
+                                            href="#"
+                                            class="btn btn-danger rounded-pill"
+                                            >Conoce más</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-lg-3"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="300"
+                            >
+                                <div class="card mb-4">
+                                    <img
+                                        src="./assets/images/p-1@2x.png"
+                                        class="card-img-top"
+                                        alt="Res para tu menú navideño"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Res para tu menú navideño
+                                        </h5>
+                                        <a
+                                            href="#"
+                                            class="btn btn-danger rounded-pill"
+                                            >Conoce más</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-3 text-center">
+                        <div class="row">
+                            <div
+                                class="col-lg-3"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="400"
+                            >
+                                <div class="card mb-4">
+                                    <img
+                                        src="./assets/images/p-1@2x.png"
+                                        class="card-img-top"
+                                        alt="Res para tu menú navideño"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Res para tu menú navideño
+                                        </h5>
+                                        <a
+                                            href="#"
+                                            class="btn btn-danger rounded-pill"
+                                            >Conoce más</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-lg-3"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="500"
+                            >
+                                <div class="card mb-4">
+                                    <img
+                                        src="./assets/images/p-1@2x.png"
+                                        class="card-img-top"
+                                        alt="Res para tu menú navideño"
+                                    />
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            Res para tu menú navideño
+                                        </h5>
+                                        <a
+                                            href="#"
+                                            class="btn btn-danger rounded-pill"
+                                            >Conoce más</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="py-60">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <h1
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="0"
+                        >
+                            Blog
+                        </h1>
+                        <p
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="100"
+                        >
+                            Conoce las últimas noticias.
+                        </p>
+                    </div>
+                    <div class="col-6 my-auto text-end">
+                        <a
+                            class="btn btn-success rounded-pill"
+                            href="#"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="200"
+                            >Ver más</a
+                        >
+                    </div>
+                </div>
+                <div class="row">
+                    <div
+                        class="col-lg-4"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="300"
+                    >
+                        <div class="card mb-4">
+                            <a href="#">
+                                <img
+                                    src="./assets/images/b-1@2x.png"
+                                    class="card-img-top"
+                                    alt="Res para tu menú navideño"
+                                />
+                            </a>
+                            <div class="card-body">
+                                <a href="#">
+                                    <h5 class="card-title">
+                                        El sabor de la tradición
+                                    </h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-4"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="400"
+                    >
+                        <div class="card mb-4">
+                            <a href="#">
+                                <img
+                                    src="./assets/images/b-1@2x.png"
+                                    class="card-img-top"
+                                    alt="Res para tu menú navideño"
+                                />
+                            </a>
+                            <div class="card-body">
+                                <a href="#">
+                                    <h5 class="card-title">
+                                        El sabor de la tradición El sabor de la
+                                        tradicion El Sabor de la tradicion
+                                    </h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-4"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="500"
+                    >
+                        <div class="card mb-4">
+                            <a href="#">
+                                <img
+                                    src="./assets/images/b-1@2x.png"
+                                    class="card-img-top"
+                                    alt="Res para tu menú navideño"
+                                />
+                            </a>
+                            <div class="card-body">
+                                <a href="#">
+                                    <h5 class="card-title">
+                                        El sabor de la tradición
+                                    </h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="py-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 offset-lg-1">
+                        <h1
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="0"
+                        >
+                            Beneficios
+                        </h1>
+                        <p
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="200"
+                        >
+                            <strong>para empresas y colaboradores</strong>
+                        </p>
+                        <ul
+                            class="mb-4"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="300"
+                        >
+                            <li>
+                                Genera experiencias memorables en tu equipo.
+                            </li>
+                            <li>
+                                Asegura calidad y practicidad en cada entrega.
+                            </li>
+                            <li>
+                                Refuerza la conexión de tu marca con tus
+                                colaboradores.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1">
+                        <img
+                            class="rounded img-fluid"
+                            src="./assets/images/thumb-beneficios.png"
+                            alt="Beneficios"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="400"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-60 text-center text-lg-start">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-lg-8">
+                        <h1
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="0"
+                        >
+                            Haz que tu equipo viva una Navidad inolvidable
+                        </h1>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a
+                            class="btn btn-primary rounded-pill"
+                            href="#"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="100"
+                            >Contáctanos ahora</a
+                        >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 my-auto">
+                        <ul class="list-inline mb-4 mb-lg-0">
+                            <li class="list-inline-item">
+                                <a href="tel:+526141111111">
+                                    <i class="fa-solid fa-phone"></i> 614
+                                    111-1111
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fa-brands fa-whatsapp"></i> 614
+                                    111-1111
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="mailto:contacto@carnemart.mx">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    contacto@carnemart.mx
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="col-8 offset-2 col-lg-2 offset-lg-2 text-lg-end"
+                    >
+                        <a href="/">
+                            <img
+                                class="img-fluid"
+                                src="./assets/images/logo-footer@2x.png"
+                                alt="Carnemart"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./assets/js/app.bundle.js" defer></script>
+    </body>
+</html>

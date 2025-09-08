@@ -1,0 +1,53 @@
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+}
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+    #acerca-de {
+        position: relative;
+        z-index: 1;
+
+        #caracteristicas-1,
+        #caracteristicas-2 {
+            position: relative;
+            top: -30px;
+        }
+    }
+
+    #catalogo {
+        position: relative;
+        top: -30px;
+        z-index: 2;
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+    #acerca-de {
+        #caracteristicas-1,
+        #caracteristicas-2 {
+            top: -90px;
+        }
+    }
+
+    #catalogo {
+        padding-bottom: 0;
+        padding-top: 0;
+        top: -90px;
+
+        h1 {
+            color: #f7f3ec;
+        }
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@include media-breakpoint-up(xxl) {
+}
