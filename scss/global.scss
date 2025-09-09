@@ -213,13 +213,34 @@ header {
     ul {
         li {
             img {
-                max-width: 50px;
+                max-height: 40px;
             }
 
             p {
                 margin-bottom: 0;
             }
         }
+    }
+
+    .caracteristica {
+        position: relative;
+    }
+
+    #caracteristica-1 {
+    }
+
+    #caracteristica-2 {
+        left: 10px;
+    }
+
+    #caracteristica-3 {
+    }
+
+    #caracteristica-4 {
+        left: 12px;
+    }
+
+    #caracteristica-5 {
     }
 }
 
