@@ -18,7 +18,7 @@
         <?php endif; ?>>
     </section>
 
-    <div class="container py-60">
+    <section class="container py-60">
         <div class="row">
             <div class="col-md-12">
                 <h1 data-aos="fade-up"
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 <?php
     endwhile;
