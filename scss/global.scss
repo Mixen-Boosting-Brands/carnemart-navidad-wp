@@ -361,3 +361,13 @@ footer {
         }
     }
 }
+
+.modal {
+    background-color: #f7f3ec;
+    color: $texto;
+
+    @include color-mode(dark) {
+        background-color: #f7f3ec;
+        color: $texto;
+    }
+}
