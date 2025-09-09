@@ -1,4 +1,4 @@
-        <footer class="py-60 text-center text-lg-start">
+        <footer id="contacto" class="py-60 text-center text-lg-start">
             <div class="container">
                 <div class="row mb-4">
                     <div class="col-lg-8">
