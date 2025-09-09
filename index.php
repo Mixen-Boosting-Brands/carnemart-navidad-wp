@@ -222,14 +222,19 @@
         <?php
         $args = [
             "post_type" => "post",
-            "posts_per_page" => 5,
+            "posts_per_page" => -1,
             "category_name" => "catalogo",
         ];
 
         $catalogo_query = new WP_Query($args);
 
         if ($catalogo_query->have_posts()):
-            $delay = 0; ?>
+            // Registrar tamaño custom en functions.php:
+            // add_image_size('catalogo-thumb', 624, 436, true);
+
+            $delay = 100;
+            $count = 0;
+            ?>
             <section id="catalogo">
                 <div class="container">
                     <div class="row mb-3">
@@ -243,40 +248,61 @@
                             </h1>
                         </div>
                     </div>
-                    <div class="row justify-content-center">
-                        <?php while ($catalogo_query->have_posts()):
-                            $catalogo_query->the_post(); ?>
-                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="<?php echo esc_attr($delay); ?>"
-                            >
-                                <div class="card h-100">
-                                    <?php if (has_post_thumbnail()): ?>
-                                        <a href="<?php the_permalink(); ?>">
-                                            <?php the_post_thumbnail(
-                                                "catalogo-thumb",
-                                                [
-                                                    "class" => "card-img-top",
-                                                    "alt" => esc_attr(
-                                                        get_the_title(),
-                                                    ),
-                                                ],
-                                            ); ?>
-                                        </a>
-                                    <?php endif; ?>
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title"><?php the_title(); ?></h5>
-                                        <a href="<?php the_permalink(); ?>"
-                                           class="btn btn-danger rounded-pill">
-                                            Conoce más
-                                        </a>
+
+                    <div class="row">
+                        <div class="col-lg-10 offset-lg-2 text-center">
+                            <div class="row">
+                                <?php while ($catalogo_query->have_posts()):
+                                    $catalogo_query->the_post(); ?>
+                                    <?php if ($count === 3): ?>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-lg-10 offset-lg-3 text-center">
+                                        <div class="row">
+                                    <?php endif; ?>
+
+                                    <div class="col-lg-3"
+                                        data-aos="fade-up"
+                                        data-aos-duration="1000"
+                                        data-aos-delay="<?php echo esc_attr(
+                                            $delay,
+                                        ); ?>"
+                                    >
+                                        <div class="card mb-4">
+                                            <?php if (has_post_thumbnail()): ?>
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <?php the_post_thumbnail(
+                                                        "catalogo-thumb",
+                                                        [
+                                                            "class" =>
+                                                                "card-img-top",
+                                                            "alt" => esc_attr(
+                                                                get_the_title(),
+                                                            ),
+                                                        ],
+                                                    ); ?>
+                                                </a>
+                                            <?php endif; ?>
+                                            <div class="card-body">
+                                                <h5 class="card-title"><?php the_title(); ?></h5>
+                                                <a href="<?php the_permalink(); ?>"
+                                                   class="btn btn-danger rounded-pill">
+                                                   Conoce más
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php
+                                    $delay += 100;
+                                    $count++;
+                                    ?>
+                                <?php
+                                endwhile; ?>
+                                </div>
                             </div>
-                            <?php $delay += 100; ?>
-                        <?php
-                        endwhile; ?>
+                        </div>
                     </div>
                 </div>
             </section>
