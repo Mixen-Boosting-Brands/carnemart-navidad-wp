@@ -377,116 +377,26 @@
             </div>
         </section>
 
-        <section id="blog" class="py-60">
-            <div class="container">
-                <div class="row mb-4">
-                    <div class="col-6">
-                        <h1
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="0"
-                        >
-                            Blog
-                        </h1>
-                        <p
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="100"
-                        >
-                            Conoce las últimas noticias.
-                        </p>
-                    </div>
-                    <div class="col-6 my-auto text-end">
-                        <a
-                            class="btn btn-success rounded-pill"
-                            href="#"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="200"
-                            >Ver más</a
-                        >
-                    </div>
-                </div>
-                <div class="row">
-                    <div
-                        class="col-lg-4"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="300"
-                    >
-                        <div class="card mb-4">
-                            <a href="#">
-                                <img
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri(),
-                                    ); ?>/assets/images/b-1@2x.png"
-                                    class="card-img-top"
-                                    alt="Res para tu menú navideño"
-                                />
-                            </a>
-                            <div class="card-body">
-                                <a href="#">
-                                    <h5 class="card-title">
-                                        El sabor de la tradición
-                                    </h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="col-lg-4"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="400"
-                    >
-                        <div class="card mb-4">
-                            <a href="#">
-                                <img
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri(),
-                                    ); ?>/assets/images/b-1@2x.png"
-                                    class="card-img-top"
-                                    alt="Res para tu menú navideño"
-                                />
-                            </a>
-                            <div class="card-body">
-                                <a href="#">
-                                    <h5 class="card-title">
-                                        El sabor de la tradición El sabor de la
-                                        tradicion El Sabor de la tradicion
-                                    </h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="col-lg-4"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="500"
-                    >
-                        <div class="card mb-4">
-                            <a href="#">
-                                <img
-                                    src="<?php echo esc_url(
-                                        get_template_directory_uri(),
-                                    ); ?>/assets/images/b-1@2x.png"
-                                    class="card-img-top"
-                                    alt="Res para tu menú navideño"
-                                />
-                            </a>
-                            <div class="card-body">
-                                <a href="#">
-                                    <h5 class="card-title">
-                                        El sabor de la tradición
-                                    </h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php
+        $blog_query = new WP_Query([
+            "category_name" => "blog",
+            "posts_per_page" => 3,
+        ]);
+
+        if ($blog_query->have_posts()):
+            // Reemplazar loop global con el de $blog_query
+            global $wp_query;
+            $old_query = $wp_query;
+            $wp_query = $blog_query;
+
+            get_template_part("template-parts/content", "blog");
+
+            // Restaurar query original
+            $wp_query = $old_query;
+            wp_reset_postdata();
+        endif;
+        ?>
+
 
         <section id="beneficios" class="py-60">
             <div class="container">
