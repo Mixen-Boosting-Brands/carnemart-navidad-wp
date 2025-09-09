@@ -219,163 +219,78 @@
             </div>
         </section>
 
-        <section id="catalogo">
-            <div class="container">
-                <div class="row mb-3">
-                    <div class="col-12 text-center">
-                        <h1
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="0"
-                        >
-                            Conoce nuestro catálogo
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-2 text-center">
-                        <div class="row">
-                            <div
-                                class="col-lg-3"
+        <?php
+        $args = [
+            "post_type" => "post",
+            "posts_per_page" => 5,
+            "category_name" => "catalogo",
+        ];
+
+        $catalogo_query = new WP_Query($args);
+
+        if ($catalogo_query->have_posts()):
+            $delay = 0; ?>
+            <section id="catalogo">
+                <div class="container">
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <h1
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
-                                data-aos-delay="100"
+                                data-aos-delay="0"
                             >
-                                <div class="card mb-4">
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri(),
-                                        ); ?>/assets/images/p-1@2x.png"
-                                        class="card-img-top"
-                                        alt="Res para tu menú navideño"
-                                    />
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            Res para tu menú navideño
-                                        </h5>
-                                        <a
-                                            href="#"
-                                            class="btn btn-danger rounded-pill"
-                                            >Conoce más</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="col-lg-3"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="200"
-                            >
-                                <div class="card mb-4">
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri(),
-                                        ); ?>/assets/images/p-1@2x.png"
-                                        class="card-img-top"
-                                        alt="Res para tu menú navideño"
-                                    />
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            Res para tu menú navideño
-                                        </h5>
-                                        <a
-                                            href="#"
-                                            class="btn btn-danger rounded-pill"
-                                            >Conoce más</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="col-lg-3"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="300"
-                            >
-                                <div class="card mb-4">
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri(),
-                                        ); ?>/assets/images/p-1@2x.png"
-                                        class="card-img-top"
-                                        alt="Res para tu menú navideño"
-                                    />
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            Res para tu menú navideño
-                                        </h5>
-                                        <a
-                                            href="#"
-                                            class="btn btn-danger rounded-pill"
-                                            >Conoce más</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
+                                Conoce nuestro catálogo
+                            </h1>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-3 text-center">
-                        <div class="row">
-                            <div
-                                class="col-lg-3"
+                    <div class="row justify-content-center">
+                        <?php while ($catalogo_query->have_posts()):
+                            $catalogo_query->the_post(); ?>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4"
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
-                                data-aos-delay="400"
+                                data-aos-delay="<?php echo esc_attr($delay); ?>"
                             >
-                                <div class="card mb-4">
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri(),
-                                        ); ?>/assets/images/p-1@2x.png"
-                                        class="card-img-top"
-                                        alt="Res para tu menú navideño"
-                                    />
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            Res para tu menú navideño
-                                        </h5>
-                                        <a
-                                            href="#"
-                                            class="btn btn-danger rounded-pill"
-                                            >Conoce más</a
-                                        >
+                                <div class="card h-100">
+                                    <?php if (has_post_thumbnail()): ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php the_post_thumbnail(
+                                                "catalogo-thumb",
+                                                [
+                                                    "class" => "card-img-top",
+                                                    "alt" => esc_attr(
+                                                        get_the_title(),
+                                                    ),
+                                                ],
+                                            ); ?>
+                                        </a>
+                                    <?php endif; ?>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title"><?php the_title(); ?></h5>
+                                        <a href="<?php the_permalink(); ?>"
+                                           class="btn btn-danger rounded-pill">
+                                            Conoce más
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="col-lg-3"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="500"
-                            >
-                                <div class="card mb-4">
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri(),
-                                        ); ?>/assets/images/p-1@2x.png"
-                                        class="card-img-top"
-                                        alt="Res para tu menú navideño"
-                                    />
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            Res para tu menú navideño
-                                        </h5>
-                                        <a
-                                            href="#"
-                                            class="btn btn-danger rounded-pill"
-                                            >Conoce más</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <?php $delay += 100; ?>
+                        <?php
+                        endwhile; ?>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <?php wp_reset_postdata();
+        else:
+             ?>
+            <section id="catalogo">
+                <div class="container">
+                    <p class="text-center">Por ahora no hay productos en el catálogo.</p>
+                </div>
+            </section>
+        <?php
+        endif;
+        ?>
 
         <?php
         $blog_query = new WP_Query([
@@ -396,7 +311,6 @@
             wp_reset_postdata();
         endif;
         ?>
-
 
         <section id="beneficios" class="py-60">
             <div class="container">
