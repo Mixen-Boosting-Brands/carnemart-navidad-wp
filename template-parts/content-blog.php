@@ -34,7 +34,8 @@
 
         <div class="row">
             <?php // Si ya existe un loop global (ej: en category.php o archive.php), úsalo.
-            if (have_posts()):
+
+if (have_posts()):
                 $delay = 300;
                 while (have_posts()):
                     the_post(); ?>
@@ -47,10 +48,10 @@
                     <div class="card mb-4">
                         <a href="<?php the_permalink(); ?>">
                             <?php if (has_post_thumbnail()): ?>
-                                <?php the_post_thumbnail("medium_large", [
-                                    "class" => "card-img-top",
-                                    "alt" => esc_attr(get_the_title()),
-                                ]); ?>
+                            <?php the_post_thumbnail("blog-thumb", [
+                                "class" => "card-img-top",
+                                "alt" => esc_attr(get_the_title()),
+                            ]); ?>
                             <?php else: ?>
                                 <img
                                     src="<?php echo esc_url(
