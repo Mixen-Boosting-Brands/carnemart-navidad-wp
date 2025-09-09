@@ -13,7 +13,9 @@
                     <div class="col-lg-4 text-lg-end">
                         <a
                             class="btn btn-primary rounded-pill"
-                            href="#"
+                            href="javascript:void(0)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#contactoModal"
                             data-aos="fade-up"
                             data-aos-duration="1000"
                             data-aos-delay="100"
