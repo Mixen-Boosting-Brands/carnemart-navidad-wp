@@ -75,22 +75,36 @@
                 <nav>
                     <ul id="navmenu" class="list-unstyled mb-0">
                         <li>
-                            <a class="anchor" id="btn-nav-1" href="#jumbotron"
+                            <a class="anchor" id="btn-nav-1" href="<?php echo esc_url(
+                                home_url(),
+                            ); ?>"
                                 >Inicio</a
                             >
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-2" href="#catalogo"
+                            <a class="anchor" id="btn-nav-2" href="<?php if (
+                                !is_home()
+                            ):
+                                echo esc_url(home_url());
+                            endif; ?>#catalogo"
                                 >Catálogo</a
                             >
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-3" href="#blog"
+                            <a class="anchor" id="btn-nav-3" href="<?php if (
+                                !is_home()
+                            ):
+                                echo esc_url(home_url());
+                            endif; ?>#blog"
                                 >Blog</a
                             >
                         </li>
                         <li>
-                            <a class="anchor" id="btn-nav-4" href="#beneficios"
+                            <a class="anchor" id="btn-nav-4" href="<?php if (
+                                !is_home()
+                            ):
+                                echo esc_url(home_url());
+                            endif; ?>#beneficios"
                                 >Beneficios</a
                             >
                         </li>
@@ -132,18 +146,26 @@
                         <nav class="d-none d-lg-block">
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item">
-                                    <a class="active" href="#jumbotron">
+                                    <a class="active" href="<?php echo esc_url(
+                                        home_url(),
+                                    ); ?>">
                                         Inicio
                                     </a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#catalogo"> Catálogo </a>
+                                    <a href="<?php if (!is_home()):
+                                        echo esc_url(home_url());
+                                    endif; ?>#catalogo"> Catálogo </a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#blog"> Blog </a>
+                                    <a href="<?php if (!is_home()):
+                                        echo esc_url(home_url());
+                                    endif; ?>#blog"> Blog </a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#beneficios"> Beneficios </a>
+                                    <a href="<?php if (!is_home()):
+                                        echo esc_url(home_url());
+                                    endif; ?>#beneficios"> Beneficios </a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a
