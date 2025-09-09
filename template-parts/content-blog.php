@@ -1,4 +1,7 @@
-<section id="blog" class="py-60">
+<section id="blog" class="py-60" <?php if (
+    is_category() ||
+    is_archive()
+): ?>style="margin-top: 64px;"<?php endif; ?>>
     <div class="container">
         <div class="row mb-4">
             <div class="col-6">
