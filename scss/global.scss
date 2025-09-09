@@ -205,6 +205,12 @@ header {
     }
 }
 
+#jumbotron-interna {
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+}
+
 #acerca-de {
     background-color: #142f1c;
     background-image: linear-gradient(to bottom, #142f1c 0%, #006633 100%);
