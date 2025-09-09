@@ -111,9 +111,11 @@
                     </ul>
                 </nav>
                 <a
-                    href="#contacto"
+                    href="javascript:void(0)"
                     class="anchor btn btn-success rounded-pill"
                     id="btn-contacto"
+                    data-bs-toggle="modal"
+                    data-bs-target="#contactoModal"
                     >Contáctanos</a
                 >
             </div>
@@ -170,7 +172,9 @@
                                 <li class="list-inline-item">
                                     <a
                                         class="btn btn-success rounded-pill"
-                                        href="#contacto"
+                                        href="javascript:void(0)"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#contactoModal"
                                     >
                                         Contáctanos
                                     </a>
