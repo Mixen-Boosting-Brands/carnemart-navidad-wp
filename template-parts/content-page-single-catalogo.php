@@ -5,7 +5,7 @@
     <section class="py-60" style="margin-top: 64px;">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-8 offset-lg-2">
+                <div class="col-12 col-lg-6 offset-lg-3">
                     <h1 data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="100"><?php the_title(); ?></h1>
