@@ -27,21 +27,33 @@
                     <div class="col-lg-8 my-auto">
                         <ul class="list-inline mb-4 mb-lg-0">
                             <li class="list-inline-item">
-                                <a href="tel:+526141111111">
+                                <a href="tel:+526141296248">
                                     <i class="fa-solid fa-phone"></i> 614
-                                    111-1111
+                                    129-6248
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#">
+                                <a href="https://wa.me/5216141296248?text=Hola%20%E2%9C%8C%20Quisiera%20más%20info" rel="noopener noreferrer">
                                     <i class="fa-brands fa-whatsapp"></i> 614
-                                    111-1111
+                                    129-6248
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a href="mailto:contacto@carnemart.mx">
                                     <i class="fa-regular fa-envelope"></i>
                                     contacto@carnemart.mx
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="list-inline mb-4 mb-lg-0">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/CarneMartOficial/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-square-facebook" alt="Facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/carnemart" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-instagram" alt="Instagram"></i>
                                 </a>
                             </li>
                         </ul>
