@@ -25,7 +25,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 my-auto">
-                        <ul class="list-inline mb-4 mb-lg-0">
+                        <ul class="list-inline mb-4">
                             <li class="list-inline-item">
                                 <a href="tel:+526141296248">
                                     <i class="fa-solid fa-phone"></i> 614
