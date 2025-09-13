@@ -65,7 +65,7 @@ if (isset($_POST["nombre"]) && isset($_POST["de-acuerdo"])) {
             "noreply@navidadcarnemart.com",
             "Correo noreply@navidadcarnemart.com",
         );
-        $mail->addAddress("jacuna@bafar.com.mx");
+        $mail->addAddress("luis.pando@mixen.mx");
         $mail->addReplyTo($correo, "Deseo obtener más información.");
 
         //Content
