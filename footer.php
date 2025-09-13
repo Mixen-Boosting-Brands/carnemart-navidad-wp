@@ -249,7 +249,7 @@
                                 id="municipio"
                                 name="municipio"
                                 placeholder="Municipio*"
-                                pattern=".{5,50}"
+                                pattern=".{2,50}"
                                 required
                             />
                             <label for="municipio" class="form-label"
@@ -303,7 +303,7 @@
                                 id="numero"
                                 name="numero"
                                 placeholder="numero*"
-                                pattern=".{5,50}"
+                                pattern=".{1,50}"
                                 required
                             />
                             <label for="numero" class="form-label"
