@@ -198,16 +198,45 @@
                         <div class="col-md-4 form-floating">
                             <select
                                 class="form-control"
+                                id="estado"
                                 name="estado"
                                 required
                             >
-                                <option value="">
-                                    Selecciona...
-                                </option>
+                                <option value="">Selecciona...</option>
+                                <option value="Aguascalientes">Aguascalientes</option>
+                                <option value="Baja California">Baja California</option>
+                                <option value="Baja California Sur">Baja California Sur</option>
+                                <option value="Campeche">Campeche</option>
+                                <option value="Chiapas">Chiapas</option>
+                                <option value="Chihuahua">Chihuahua</option>
+                                <option value="Ciudad de México">Ciudad de México</option>
+                                <option value="Coahuila">Coahuila</option>
+                                <option value="Colima">Colima</option>
+                                <option value="Durango">Durango</option>
+                                <option value="Estado de México">Estado de México</option>
+                                <option value="Guanajuato">Guanajuato</option>
+                                <option value="Guerrero">Guerrero</option>
+                                <option value="Hidalgo">Hidalgo</option>
+                                <option value="Jalisco">Jalisco</option>
+                                <option value="Michoacán">Michoacán</option>
+                                <option value="Morelos">Morelos</option>
+                                <option value="Nayarit">Nayarit</option>
+                                <option value="Nuevo León">Nuevo León</option>
+                                <option value="Oaxaca">Oaxaca</option>
+                                <option value="Puebla">Puebla</option>
+                                <option value="Querétaro">Querétaro</option>
+                                <option value="Quintana Roo">Quintana Roo</option>
+                                <option value="San Luis Potosí">San Luis Potosí</option>
+                                <option value="Sinaloa">Sinaloa</option>
+                                <option value="Sonora">Sonora</option>
+                                <option value="Tabasco">Tabasco</option>
+                                <option value="Tamaulipas">Tamaulipas</option>
+                                <option value="Tlaxcala">Tlaxcala</option>
+                                <option value="Veracruz">Veracruz</option>
+                                <option value="Yucatán">Yucatán</option>
+                                <option value="Zacatecas">Zacatecas</option>
                             </select>
-                            <label for="estado" class="form-label"
-                                >Estado*</label
-                            >
+                            <label for="estado" class="form-label">Estado*</label>
                             <div class="valid-feedback">¡Luce bien!</div>
                             <div class="invalid-feedback">
                                 Por favor selecciona un Estado.
@@ -232,21 +261,21 @@
                             </div>
                         </div>
                         <div class="col-md-4 form-floating">
-                            <select
-                                class="form-control"
+                            <input
+                                type="text"
+                                class="form-control shadow-none"
+                                id="colonia"
                                 name="colonia"
+                                placeholder="Colonia*"
+                                pattern=".{5,50}"
                                 required
-                            >
-                                <option value="">
-                                    Selecciona...
-                                </option>
-                            </select>
+                            />
                             <label for="colonia" class="form-label"
                                 >Colonia*</label
                             >
                             <div class="valid-feedback">¡Luce bien!</div>
                             <div class="invalid-feedback">
-                                Por favor selecciona tu colonia.
+                                Por favor introduce tu colonia.
                             </div>
                         </div>
                         <div class="col-md-4 form-floating">
