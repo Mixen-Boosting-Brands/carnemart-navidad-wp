@@ -39,9 +39,9 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="mailto:contacto@carnemart.mx">
+                                <a href="mailto:jacuna@carnemart.mx">
                                     <i class="fa-regular fa-envelope"></i>
-                                    contacto@carnemart.mx
+                                    jacuna@carnemart.mx
                                 </a>
                             </li>
                         </ul>
