@@ -20,7 +20,7 @@ $mail->CharSet = "UTF-8";
 $mail->isSMTP();
 $mail->Host = "smtp.hostinger.com";
 $mail->SMTPAuth = true;
-$mail->Username = "noreply@dinonuggets.mx";
+$mail->Username = "noreply@navidadcarnemart.com";
 $mail->Password = "atHD-3sR2y@2";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
@@ -62,10 +62,10 @@ if (isset($_POST["nombre"]) && isset($_POST["de-acuerdo"])) {
     try {
         //Recipients
         $mail->setFrom(
-            "noreply@dinonuggets.mx",
-            "Correo noreply@dinonuggets.mx"
+            "noreply@navidadcarnemart.com",
+            "Correo noreply@navidadcarnemart.com",
         );
-        $mail->addAddress("jacuna@bafar.com.mx");
+        $mail->addAddress("luis.pando@mixen.mx");
         $mail->addReplyTo($correo, "Deseo obtener más información.");
 
         //Content
@@ -92,7 +92,7 @@ if (isset($_POST["nombre"]) && isset($_POST["de-acuerdo"])) {
             <br>
             Aceptó términos y condiciones: {$deAcuerdo}<br>
             <br>
-            Este mensaje fue enviado a través del formulario de contacto en el sitio web de Dinonuggets.mx.";
+            Este mensaje fue enviado a través del formulario de contacto en el sitio web de navidadcarnemart.com.";
 
         $mail->send();
         echo "Gracias por contactarnos, nos pondremos en contacto contigo a la brevedad.";
